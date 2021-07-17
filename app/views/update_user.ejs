@@ -1,0 +1,76 @@
+<%- include('include/_header') %>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> REGRESAR</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Actualizar certificado de vacunación</h2>
+                <span class="text-light">Utiliza el siguiente formulario para actualizar un certificado de
+                    Vacunación</span>
+            </div>
+
+            <form method="POST" id="update_user">
+                <div class="new_user">
+                    <div class="row">
+                        <div class="form-group column">
+                            <label for="ci" class="text-light">Cédula</label>
+                            <input type="hidden" name="id" value="<%= user._id %>">
+                            <input type="text" name="ci" value="<%= user.ci %>" placeholder="">
+                        </div>
+                        <div class="form-group column" style="margin-left: 10px;">
+                            <label for="nombres" class="text-light">Nombres</label>
+                            <input type="text" name="nombres" value="<%= user.nombres %>" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group column">
+                            <label for="centro" class="text-light">Centro de Vacunación</label>
+                            <input type="text" name="centro" value="<%= user.centro %>" placeholder="">
+                        </div>
+                        <div class="form-group column" style="margin-left: 10px;">
+                            <label for="edad" class="text-light">Edad</label>
+                            <input type="text" name="edad" value="<%= user.edad %>" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vacuna" class="text-light">Vacuna</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="vacuna" value="Pfizer" <%=user.vacuna=='Pfizer'
+                                ? 'checked' : '' %>>
+                            <label for="radio-2" class="radio-label">Pfizer</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="vacuna" value="Sinovak" <%=user.vacuna=='Sinovak'
+                                ? 'checked' : '' %>>
+                            <label for="radio-3" class="radio-label">Sinovak</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group column">
+                            <label for="dosis" class="text-light">Dosis</label>
+                            <input type="text" name="dosis" value="<%= user.dosis %>" placeholder="">
+                        </div>
+
+                        <div class="form-group column" style="margin-left: 10px;">
+                            <label for="lote" class="text-light">Lote</label>
+                            <input type="text" name="lote" value="<%= user.lote %>" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Actualizar</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <%- include('include/_footer') %>

@@ -1,0 +1,57 @@
+<form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="row">
+            <div class="form-group column">
+                <label for="ci" class="text-light">Cédula</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="ci" value="" placeholder="">
+            </div>
+            <div class="form-group column" style="margin-left: 10px;">
+                <label for="nombres" class="text-light">Nombres</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="nombres" value="" placeholder="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group column">
+                <label for="centro" class="text-light">Centro de Vacunación</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="centro" value="" placeholder="">
+            </div>
+            <div class="form-group column" style="margin-left: 10px;">
+                <label for="edad" class="text-light">Edad</label>
+                <input type="text" name="edad" value="" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="vacuna" class="text-light">Vacuna</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="vacuna" value="Pfizer">
+                <label for="radio-2" class="radio-label">Pfizer</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="vacuna" value="Sinovak">
+                <label for="radio-3" class="radio-label">Sinovak</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group column">
+                <label for="dosis" class="text-light">Dosis</label>
+                <input type="text" name="dosis" value="" placeholder="">
+            </div>
+
+            <div class="form-group column" style="margin-left: 10px;">
+                <label for="lote" class="text-light">Lote</label>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="lote" value="" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Registrar</button>
+        </div>
+
+    </div>
+</form>

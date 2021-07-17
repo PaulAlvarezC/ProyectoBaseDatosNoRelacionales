@@ -1,0 +1,33 @@
+<%- include('include/_header') %>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">Nuevo Certificado <i class="fas fa-plus"></i></span>
+                </a>
+            </div>
+
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>CÉDULA</th>
+                            <th>CENTRO VACUNACIÓN</th>
+                            <th>NOMBRES</th>
+                            <th>EDAD</th>
+                            <th>VACUNA</th>
+                            <th>DOSIS</th>
+                            <th>LOTE</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    
+<%- include('include/_footer') %>

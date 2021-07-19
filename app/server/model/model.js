@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongodb = require('mongoose');
 
-var schema = new mongoose.Schema({
+var schema = new mongodb.Schema({
     ci : {
         type : String,
         required: true
@@ -32,6 +32,6 @@ var schema = new mongoose.Schema({
     }
 })
 
-const Userdb = mongoose.model('usuarios', schema);
+const Userdb = mongodb.model('usuarios', schema);
 
 module.exports = Userdb;

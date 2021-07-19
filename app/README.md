@@ -1,15 +1,16 @@
-# CRUD_Application_Node
-In this project, we are going to create node CRUD application with express and mongodb.
+# PROYECTO FINAL BASE DE DATOS NO RELACIONALES
+En este proyecto se realizó un simple CRUD para el ingreso de certificados de vacunación.
 
-#### To Run this project Clone it and install modules using
-```
+# PARA EJECUTAR ESTE PROYECTO DEBES TENER INSTALADO  NODE.JS EN TU MÁQUINA
+
+Ejecutar el siguiente comando para descargar las dependencias que utiliza el proyecto:
+
 npm install
-```
 
-Then Create config.env file and create PORT and MONGO_URI Variable and specify Value.
-That's it. You are ready to go. To execute this project just type
-```
+Despues se debe modificar el archivo config.env y cambiar la URL de mongo
+
+Para levantar la aplicación debes  ejecutar el siguiente comando:
 npm start
-```
 
-Enjoy...!
+
+Listo!!!

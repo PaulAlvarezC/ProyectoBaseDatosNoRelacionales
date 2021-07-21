@@ -3,12 +3,12 @@ const mongodb = require('mongoose');
 var schema = new mongodb.Schema({
     ci : {
         type : String,
-        required: true
+        required: true,
+        unique: true
     },
     centro : {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     nombres : {
         type : String,
@@ -22,16 +22,29 @@ var schema = new mongodb.Schema({
         type : String,
         required: true
     },
-    dosis : {
-        type : Number,
+    fechaPrimeraDosis : {
+        type : Date,
         required: true
     },
-    lote : {
+    fechaSegundaDosis : {
+        type : Date
+    },
+    vacunadorPrimeraDosis : {
         type : String,
         required: true
+    },
+    vacunadorSegundaDosis : {
+        type : String
+    },
+    lotePrimeraDosis : {
+        type : String,
+        required: true
+    },
+    loteSegundaDosis : {
+        type : String
     }
 })
 
-const Userdb = mongodb.model('usuarios', schema);
+const Userdb = mongodb.model('carnets', schema);
 
 module.exports = Userdb;

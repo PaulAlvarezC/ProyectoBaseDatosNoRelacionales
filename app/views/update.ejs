@@ -1,0 +1,110 @@
+<%- include('include/_header') %>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> REGRESAR</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Actualizar carnet de vacunación</h2>
+            </div>
+
+            <form method="POST" id="update_user">
+                <div class="new_user">
+                    <div class="row">
+                        <div class="form-group column">
+                            <label for="ci" class="text-light">Cédula</label>
+                            <input type="hidden" name="id" value="<%= user._id %>">
+                            <input type="text" name="ci" value="<%= user.ci %>" placeholder="" disabled>
+                        </div>
+                        <div class="form-group column" style="margin-left: 10px;">
+                            <label for="nombres" class="text-light">Nombres</label>
+                            <input type="text" name="nombres" value="<%= user.nombres %>" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group column">
+                            <label for="centro" class="text-light">Centro de Vacunación</label>
+                            <input type="text" name="centro" value="<%= user.centro %>" placeholder="">
+                        </div>
+                        <div class="form-group column" style="margin-left: 10px;">
+                            <label for="edad" class="text-light">Edad</label>
+                            <input name="edad" value="<%= user.edad %>" placeholder=""
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                type = "number"
+                                maxlength = "2"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vacuna" class="text-light">Vacuna: </label><br>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="vacuna" value="Pfizer" <%=user.vacuna=='Pfizer' ? 'checked' : '' %>>
+                            <label for="radio-2" class="radio-label">Pfizer</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="vacuna" value="Sinovak" <%=user.vacuna=='Sinovak' ? 'checked' : '' %>>
+                            <label for="radio-3" class="radio-label">Sinovak</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="vacuna" value="Astrazeneca" <%=user.vacuna=='Astrazeneca' ? 'checked' : '' %>>
+                            <label for="radio-4" class="radio-label">Astrazeneca</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-5" name="vacuna" value="Johnson & Johnson" <%=user.vacuna=='Johnson & Johnson' ? 'checked' : '' %>>
+                            <label for="radio-5" class="radio-label">Johnson & Johnson</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-6" name="vacuna" value="Moderna" <%=user.vacuna=='Moderna' ? 'checked' : '' %>>
+                            <label for="radio-6" class="radio-label">Moderna</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-7" name="vacuna" value="Sputnik" <%=user.vacuna=='Sputnik' ? 'checked' : '' %>>
+                            <label for="radio-7" class="radio-label">Sputnik</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group columna">
+                            <label for="fechaPrimeraDosis" class="text-light">Primera Dosis</label>
+                            <input type="text" name="fechaPrimeraDosis" value="<%= user.fechaPrimeraDosis %>" placeholder="" disabled>
+                        </div>
+                        <div class="form-group columna" style="margin-left: 10px;">
+                            <label for="vacunadorPrimeraDosis" class="text-light">Vacunador Primera Dosis</label>
+                            <input type="text" name="vacunadorPrimeraDosis" value="<%= user.vacunadorPrimeraDosis %>" placeholder="">
+                        </div>
+                        <div class="form-group columna" style="margin-left: 10px;">
+                            <label for="lotePrimeraDosis" class="text-light">Lote primera dosis</label>
+                            <input type="text" name="lotePrimeraDosis" value="<%= user.lotePrimeraDosis %>" placeholder="">
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="form-group columna">
+                            <label for="fechaSegundaDosis" class="text-light">Segunda Dosis</label>
+                            <input type="text" name="fechaSegundaDosis" value="<%= user.fechaSegundaDosis %>" placeholder="" >
+                        </div>
+                        <div class="form-group columna" style="margin-left: 10px;">
+                            <label for="vacunadorSegundaDosis" class="text-light">Vacunador Segunda Dosis</label>
+                            <input type="text" name="vacunadorSegundaDosis" value="<%= user.vacunadorSegundaDosis %>" placeholder="">
+                        </div>
+                        <div class="form-group columna" style="margin-left: 10px;">
+                            <label for="loteSegundaDosis" class="text-light">Lote segunda dosis</label>
+                            <input type="text" name="loteSegundaDosis" value="<%= user.loteSegundaDosis %>" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Actualizar</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <%- include('include/_footer') %>

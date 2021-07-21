@@ -41,8 +41,12 @@ exports.create = (req, res) => {
         centro: req.body.centro,
         edad: req.body.edad,
         vacuna: req.body.vacuna,
-        dosis: req.body.dosis,
-        lote: req.body.lote,
+        fechaPrimeraDosis: req.body.fechaPrimeraDosis,
+        fechaSegundaDosis: req.body.fechaSegundaDosis,
+        vacunadorPrimeraDosis: req.body.vacunadorPrimeraDosis,
+        vacunadorSegundaDosis: req.body.vacunadorSegundaDosis,
+        lotePrimeraDosis: req.body.lotePrimeraDosis,
+        loteSegundaDosis: req.body.loteSegundaDosis,
     })
 
     // GUARDAR EN DB
@@ -69,9 +73,8 @@ exports.update = (req, res) => {
         .then(data => {
             if (!data) {
                 res.status(404).send({ message: `No se puede actualziar usuario con ID: ${id}.` })
-            } else {
+            } else {                
                 res.send(data);
-                res.redirect('/');
             }
         })
         .catch(err => {

@@ -3,27 +3,59 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
+                <a href="/create" class="border-shadow">
                     <span class="text-gradient">Nuevo Certificado <i class="fas fa-plus"></i></span>
                 </a>
             </div>
 
             <form action="/" method="POST">
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="thead-light" style="background-color: #40d0e9;">
                         <tr>
                             <th>CÉDULA</th>
                             <th>CENTRO VACUNACIÓN</th>
                             <th>NOMBRES</th>
                             <th>EDAD</th>
                             <th>VACUNA</th>
-                            <th>DOSIS</th>
-                            <th>LOTE</th>
+                            <th>FECHA 1era DOSIS</th>
+                            <th>FECHA 2da  DOSIS</th>
                             <th>ACCIONES</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <%- include('include/_show') %>
+                        <% for(var i=0; i < users.length; i++) { %>
+                            <tr>
+                                <td>
+                                    <%= users[i].ci %>
+                                </td>
+                                <td>
+                                    <%= users[i].centro %>
+                                </td>
+                                <td>
+                                    <%= users[i].nombres %>
+                                </td>
+                                <td>
+                                    <%= users[i].edad %>
+                                </td>
+                                <td>
+                                    <%= users[i].vacuna %>
+                                </td>
+                                <td>
+                                    <%= users[i].fechaPrimeraDosis %>
+                                </td>
+                                <td>
+                                    <%= users[i].fechaSegundaDosis %>
+                                </td>
+                                <td>
+                                    <a href="/update?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                    <a class="btn border-shadow delete" data-id=<%=users[i]._id%> >
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% } %>
                     </tbody>
                 </table>
             </form>

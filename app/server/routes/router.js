@@ -12,15 +12,15 @@ route.get('/', services.homeRoutes);
 
 /**
  *  @description add users
- *  @method GET /add-user
+ *  @method GET /create
  */
-route.get('/add-user', services.add_user)
+route.get('/create', services.create)
 
 /**
  *  @description for update user
  *  @method GET /update-user
  */
-route.get('/update-user', services.update_user)
+route.get('/update', services.update)
 
 
 // API

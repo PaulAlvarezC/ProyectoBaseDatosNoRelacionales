@@ -12,8 +12,6 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
 
-    console.log(data);
-
     var request = {
         "url" : `http://localhost:3000/api/users/${data.id}`,
         "method" : "PUT",
@@ -21,7 +19,8 @@ $("#update_user").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Certificado actualizado correctamente!");
+        alert("Certificado actualizado correctamente!");        
+        location.reload(); 
     })
 
 })
@@ -36,7 +35,7 @@ if(window.location.pathname == "/"){
             "method" : "DELETE"
         }
 
-        if(confirm("Deseas eliminar el certificado?")){
+        if(confirm("Deseas eliminar el carnet?")){
             $.ajax(request).done(function(response){
                 alert("Certificado eliminado correctamente!");
                 location.reload();

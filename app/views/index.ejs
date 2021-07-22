@@ -47,6 +47,9 @@
                                     <%= users[i].fechaSegundaDosis %>
                                 </td>
                                 <td>
+                                    <a href="/download?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-file-download"></i></span>
+                                    </a>
                                     <a href="/update?id=<%= users[i]._id%>" class="btn border-shadow update">
                                         <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                     </a>

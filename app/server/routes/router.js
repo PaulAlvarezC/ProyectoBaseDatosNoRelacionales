@@ -22,6 +22,12 @@ route.get('/create', services.create)
  */
 route.get('/update', services.update)
 
+/**
+ *  @description for update user
+ *  @method GET /update-user
+ */
+ route.get('/download', services.download)
+
 
 // API
 route.post('/api/users', controller.create);

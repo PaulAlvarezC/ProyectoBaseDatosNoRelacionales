@@ -269,6 +269,10 @@ table {
   float: left;
   width: 32%;
 }
+.columna1 {
+  float: left;
+  width: 100%;
+}
 
 /* Clear floats after the columns */
 .row:after {

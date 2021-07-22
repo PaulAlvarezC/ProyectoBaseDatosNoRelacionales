@@ -1,5 +1,11 @@
 <%- include('include/_header') %>
 
+    <style>
+        html2canvas {
+            width: 300px !important;
+            height: 200px !important;
+        }
+    </style>
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
@@ -82,7 +88,7 @@
                         </div>
                     </div>
             
-                    <div class="row">
+                    <div class="row" id = "GFG_UP">
                         <div class="form-group columna">
                             <label for="fechaSegundaDosis" class="text-light">Segunda Dosis</label>
                             <input type="text" name="fechaSegundaDosis" value="<%= user.fechaSegundaDosis %>" placeholder="" >
@@ -100,11 +106,7 @@
                     <div class="form-group">
                         <button type="submit" class="btn text-dark update">Actualizar</button>
                     </div>
-
                 </div>
             </form>
-
         </div>
     </main>
-
-    <%- include('include/_footer') %>

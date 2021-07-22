@@ -1,7 +1,5 @@
-# ProyectoBaseDatosNoRelacionales
-Proyecto final de Base de Datos No Relacionales
-
-En este proyecto se realizó un simple CRUD para el ingreso de certificados de vacunación, visualizar los certificados, actualizar un certificado y eliminar un certificado.
+# PROYECTO FINAL BASE DE DATOS NO RELACIONALES
+En este proyecto se realizó un simple CRUD para el ingreso de certificados de vacunación.
 
 # PARA EJECUTAR ESTE PROYECTO DEBES TENER INSTALADO  NODE.JS EN TU MÁQUINA
 

@@ -153,7 +153,6 @@ table {
   }
 }
 
-/*  add user & update user template */
 .form-title {
   margin-top: 0em;
 }
@@ -168,12 +167,12 @@ table {
 }
 
 #update_user .form-group,
-#add_user .form-group {
+#create .form-group {
   margin: 0.4em 0;
 }
 
-#update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"],
+#update_carnet .form-group input[type="text"],
+#create_carnet .form-group input[type="text"],
 .form-group input[type="date"],
 .form-group input[type="number"] {
   width: 100%;
@@ -186,8 +185,8 @@ table {
   border-radius: 0.2em;
 }
 
-#update_user .form-group .radio,
-#add_user .form-group .radio {
+#update_carnet .form-group .radio,
+#create_carnet .form-group .radio {
   margin: 1em 2em;
 }
 
@@ -231,8 +230,8 @@ table {
   background: #b4b4b4;
 }
 
-#update_user .form-group .btn,
-#add_user .form-group .btn {
+#update_carnet .form-group .btn,
+#create_carnet .form-group .btn {
   width: 100%;
   padding: 0.9em 1em;
   background-color: #40d0e9;
@@ -244,8 +243,8 @@ table {
   margin: 0.5em 0;
 }
 
-#update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover {
+#update_carnet .form-group .btn:hover,
+#create_carnet .form-group .btn:hover {
   background-color: var(--dark);
   color: var(--border);
 }
@@ -274,7 +273,6 @@ table {
   width: 100%;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;

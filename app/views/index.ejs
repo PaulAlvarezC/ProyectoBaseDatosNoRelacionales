@@ -3,7 +3,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/create" class="border-shadow">
+                <a href="/create-carnet" class="border-shadow">
                     <span class="text-gradient">Registrar nuevo Carnet <i class="fas fa-plus"></i></span>
                 </a>
             </div>
@@ -50,7 +50,7 @@
                                     <a href="/download?id=<%= users[i]._id%>" class="btn border-shadow update">
                                         <span class="text-gradient"><i class="fas fa-file-download"></i></span>
                                     </a>
-                                    <a href="/update?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                    <a href="/update-carnet?id=<%= users[i]._id%>" class="btn border-shadow update">
                                         <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                     </a>
                                     <a class="btn border-shadow delete" data-id=<%=users[i]._id%> >

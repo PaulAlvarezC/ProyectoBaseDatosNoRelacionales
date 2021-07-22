@@ -5,26 +5,26 @@ const services = require('../services/render');
 const controller = require('../controller/controller');
 
 /**
- *  @description Root Route
+ *  @description Raiz de las rutas
  *  @method GET /
  */
 route.get('/', services.homeRoutes);
 
 /**
- *  @description add users
- *  @method GET /create
+ *  @description para agregar carnet
+ *  @method GET /create-carnet
  */
-route.get('/create', services.create)
+route.get('/create-carnet', services.create_carnet)
 
 /**
- *  @description for update user
- *  @method GET /update-user
+ *  @description para actualizar carnet
+ *  @method GET /update-carnet
  */
-route.get('/update', services.update)
+route.get('/update-carnet', services.update_carnet)
 
 /**
- *  @description for update user
- *  @method GET /update-user
+ *  @description para descargar carnet
+ *  @method GET /download
  */
  route.get('/download', services.download)
 
@@ -36,4 +36,4 @@ route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
 
 
-module.exports = route
+module.exports = route;

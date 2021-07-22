@@ -17,13 +17,13 @@
                 <h2 class="text-dark">Actualizar carnet de vacunación</h2>
             </div>
 
-            <form method="POST" id="update_user">
+            <form method="POST" id="update_carnet">
                 <div class="new_user">
                     <div class="row">
                         <div class="form-group column">
                             <label for="ci" class="text-light">Cédula</label>
                             <input type="hidden" name="id" value="<%= user._id %>">
-                            <input type="text" name="ci" value="<%= user.ci %>" placeholder="" disabled>
+                            <input type="text" name="ci" value="<%= user.ci %>" placeholder="">
                         </div>
                         <div class="form-group column" style="margin-left: 10px;">
                             <label for="nombres" class="text-light">Nombres</label>
@@ -76,7 +76,7 @@
                     <div class="row">
                         <div class="form-group columna">
                             <label for="fechaPrimeraDosis" class="text-light">Primera Dosis</label>
-                            <input type="text" name="fechaPrimeraDosis" value="<%= user.fechaPrimeraDosis %>" placeholder="" disabled>
+                            <input type="text" name="fechaPrimeraDosis" value="<%= user.fechaPrimeraDosis %>" placeholder="" >
                         </div>
                         <div class="form-group columna" style="margin-left: 10px;">
                             <label for="vacunadorPrimeraDosis" class="text-light">Vacunador Primera Dosis</label>
@@ -110,3 +110,5 @@
             </form>
         </div>
     </main>
+
+    <%- include('include/_footer') %>
